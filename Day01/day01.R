@@ -28,3 +28,54 @@ names <- c("Lim", "Angie", "Becky", "Jenny", "Michelle")
 names
 names[2] <- "James"
 names
+
+# factor 구분 하기
+address <- c("서울", "대구", "부산", "군산", "서울", "서울", "대구")
+address
+address2 <- as.factor(address)
+address2
+
+str(address2)
+address2[1] <- "광주"
+address2
+# Can't edit factor. Only allowed when the factor value already exist in the factors
+
+address2[1] <- "대구"
+address2
+
+# If you want to add new factor in the list of factors, change the list into characters
+# and add new factor. Then change it back to factor
+
+# 입력의 다양한 형태
+x <- scan()
+x2 <- scan()
+x2[2] <- 222
+str(x2) # structure
+class(x2) # 부류
+typeof(x2) # 데이터 유형
+is.vector(x2) # 벡터인지 확인
+
+
+food <-  scan(what = "")
+food
+
+str(food)
+typeof(food)
+class(food)
+
+favorite <- food[1]
+# print("내가 제일 좋아하는 음식은 " + favorite)
+cat("내가 제일 좋아하는 음식은", favorite)
+
+second <- food[2]
+glue("나의 {second} 음식은 2번째로 좋아하는 음식이에요.")
+
+
+
+
+
+
+
+
+
+
